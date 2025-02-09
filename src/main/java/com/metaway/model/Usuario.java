@@ -14,7 +14,7 @@ import java.util.UUID;
 @Builder
 @AllArgsConstructor
 @RequiredArgsConstructor
-@Table(name = "usuario" , schema = "petshop")
+@Table(name = "usuario" , schema = "metaway")
 public class Usuario {
 
     @Id

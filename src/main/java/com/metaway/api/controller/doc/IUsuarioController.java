@@ -68,17 +68,15 @@ public interface IUsuarioController {
     @PutMapping(value = "/{id}",produces = MediaType.APPLICATION_JSON_VALUE , consumes=MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<UsuarioResponse> atualizar(@PathVariable(name = "id") UUID id,@Valid @RequestBody UsuarioRequest usuarioRequest);
 
-//    @Operation(summary = "Realiza o carregamento das contas via Csv",
-//            description = "Realiza o carregamento das contas via Csv")
-//    @ApiResponses(value = {
-//            @ApiResponse(
-//                    responseCode = "201",
-//                    description = "Caso a carga seja realizada com sucesso."
-//            )
-//    })
-//    @PostMapping(value = "/carregarCsv",consumes = MediaType.MULTIPART_FORM_DATA_VALUE,
-//            produces = MediaType.APPLICATION_JSON_VALUE)
-//    ResponseEntity<Void> carregarCsv(@RequestParam("file") MultipartFile file);
-
+    @Operation(summary = "Realiza a deleção do usuário",
+            description = "Realiza a deleção da usuário")
+    @ApiResponses(value = {
+            @ApiResponse(
+                    responseCode = "201",
+                    description = "Caso o usuário seja deletado com sucesso."
+            )
+    })
+    @DeleteMapping(value = "/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<UsuarioResponse> deletar(@PathVariable(name = "id") UUID id);
 
 }

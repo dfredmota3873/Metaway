@@ -3,6 +3,7 @@ package com.metaway.converter;
 import com.metaway.api.dto.request.UsuarioRequest;
 import com.metaway.api.dto.response.UsuarioResponse;
 import com.metaway.model.Usuario;
+import com.metaway.model.enums.Perfil;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class UsuarioConverter {
         return Usuario.builder()
                 .nome(request.getNome())
                 .cpf(request.getCpf())
-                .perfil(request.getPerfil())
+                .perfil(Perfil.valueOf(request.getPerfil()))
                 .senha(request.getSenha())
                 .build();
 
@@ -29,7 +30,7 @@ public class UsuarioConverter {
                 .id(usuario.getId())
                 .nome(usuario.getNome())
                 .cpf(usuario.getCpf())
-                .perfil(usuario.getPerfil())
+                .perfil(usuario.getPerfil().name())
                 .senha(usuario.getSenha())
                 .build();
     }

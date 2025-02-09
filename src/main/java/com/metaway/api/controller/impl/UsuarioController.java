@@ -58,5 +58,13 @@ public class UsuarioController implements IUsuarioController {
         return ResponseEntity.ok(converter.toResponse(usuario));
     }
 
+    @Override
+    public ResponseEntity<UsuarioResponse> deletar(UUID id) {
+        log.info("Deletando dados de usuario com id: {}", id);
+        usuarioService.delete(id);
+        log.info("Deletado com sucesso id: {}", id);
+        return ResponseEntity.ok().build();
+    }
+
 
 }

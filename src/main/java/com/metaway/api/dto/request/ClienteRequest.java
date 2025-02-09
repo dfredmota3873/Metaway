@@ -9,7 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UsuarioRequest {
+public class ClienteRequest {
 
     @Size(min = 14)
     @NotNull(message = "Cpf é obrigatório.")
@@ -17,12 +17,4 @@ public class UsuarioRequest {
 
     @NotNull(message = "Nome é obrigatório.")
     private String nome;
-
-    @NotNull(message = "Perfil é obrigatório")
-    private String perfil;
-
-    @NotNull(message = "Senha é obrigatória")
-    @Size(min = 8)
-    private String senha;
-
 }

@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -14,7 +15,7 @@ import java.util.UUID;
 @Builder
 @AllArgsConstructor
 @RequiredArgsConstructor
-@Table(name = "cliente" , schema = "petshop")
+@Table(name = "cliente" , schema = "metaway")
 public class Cliente {
 
     @Id
@@ -26,5 +27,10 @@ public class Cliente {
     private String cpf;
 
     @Column(name = "data_cadastro")
-    private LocalDate dataCadastro;
+    private LocalDateTime dataCadastro;
+
+    @PrePersist
+    public void onPrePersist() {
+        this.setDataCadastro(LocalDateTime.now());
+    }
 }
