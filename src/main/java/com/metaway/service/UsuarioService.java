@@ -15,23 +15,23 @@ public class UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
 
-    public Usuario findById(UUID id) {
+    public Usuario buscarPorId(UUID id) {
         return usuarioRepository.findById(id).orElseThrow(() -> new NotFoundException("Não existe usuário com o id : " + id));
     }
 
-    public List<Usuario> findAll() {
+    public List<Usuario> buscarTodos() {
         return usuarioRepository.findAll();
     }
 
-    public Usuario save(Usuario usuario) {
+    public Usuario cadastrar(Usuario usuario) {
         return usuarioRepository.save(usuario);
     }
 
-    public void delete(UUID id) {
+    public void deletar(UUID id) {
         usuarioRepository.deleteById(id);
     }
 
-    public Usuario update(Usuario usuario, UUID id) {
+    public Usuario atualizar(Usuario usuario, UUID id) {
 
         Usuario  usuarioDB = usuarioRepository.findById(id).orElseThrow(() -> new NotFoundException("Não existe usuário com o id : " + id));
 

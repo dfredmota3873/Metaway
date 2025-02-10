@@ -27,6 +27,8 @@ public class Contato {
 
     private String tag;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "tipo_contato")
     private TipoContato tipoContato;
 
     private String valor;

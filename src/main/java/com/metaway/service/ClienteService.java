@@ -14,23 +14,23 @@ public class ClienteService {
 
     private final ClienteRepository clienteRepository;
 
-    public List<Cliente> findAll() {
+    public List<Cliente> buscarTodos() {
         return clienteRepository.findAll();
     }
 
-    public Cliente findById(UUID id) {
+    public Cliente buscarPorId(UUID id) {
         return clienteRepository.findById(id).orElseThrow(() -> new NotFoundException("Não existe cliente com o id : " + id));
     }
 
-    public Cliente save(Cliente cliente) {
+    public Cliente cadastrar(Cliente cliente) {
         return clienteRepository.save(cliente);
     }
 
-    public void delete(UUID id) {
+    public void deletar(UUID id) {
         clienteRepository.deleteById(id);
     }
 
-    public Cliente update(UUID id,Cliente cliente){
+    public Cliente atualizar(UUID id,Cliente cliente){
         Cliente clienteDB = clienteRepository.findById(id).orElseThrow(() -> new NotFoundException("Não existe cliente com o id : " + id));
 
         clienteDB.setCpf(cliente.getCpf());
