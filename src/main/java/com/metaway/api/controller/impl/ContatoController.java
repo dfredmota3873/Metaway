@@ -30,17 +30,17 @@ public class ContatoController implements IContatoController {
     @Override
     public ResponseEntity<ContatoResponse> cadastrar(ContatoRequest contatoRequest) {
         log.info("Iniciando cadastro de um contato com payload: {}", contatoRequest);
-        var cliente = contatoService.cadastrar(contatoConverter.toModel(contatoRequest));
-        log.info("Cadastro de contato realizado com sucesso id: {}", cliente.getId());
-        return ResponseEntity.ok(contatoConverter.toResponse(cliente));
+        var contato = contatoService.cadastrar(contatoConverter.toModel(contatoRequest));
+        log.info("Cadastro de contato realizado com sucesso id: {}", contato.getId());
+        return ResponseEntity.ok(contatoConverter.toResponse(contato));
     }
 
     @Override
     public ResponseEntity<ContatoResponse> buscarPorId(UUID id) {
         log.info("Iniciando busca de um contato com id: {}", id);
-        var cliente = contatoService.buscarPorId(id);
+        var contato = contatoService.buscarPorId(id);
         log.info("Busca de um contato com sucesso id: {}", id);
-        return ResponseEntity.ok(contatoConverter.toResponse(cliente));
+        return ResponseEntity.ok(contatoConverter.toResponse(contato));
     }
 
     @Override
@@ -53,9 +53,9 @@ public class ContatoController implements IContatoController {
     @Override
     public ResponseEntity<ContatoResponse> atualizar(UUID id, ContatoRequest request) {
         log.info("Atualizando dados de contato com id: {}", id);
-        var usuario = contatoService.atualizar(id, contatoConverter.toModel(request));
+        var contato = contatoService.atualizar(id, contatoConverter.toModel(request));
         log.info("Dados atualizados com sucesso id: {}", id);
-        return ResponseEntity.ok(contatoConverter.toResponse(usuario));
+        return ResponseEntity.ok(contatoConverter.toResponse(contato));
     }
 
     @Override
