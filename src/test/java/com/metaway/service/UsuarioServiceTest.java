@@ -8,6 +8,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.webjars.NotFoundException;
 
 import java.util.List;
@@ -26,6 +27,9 @@ class UsuarioServiceTest {
     @InjectMocks
     private UsuarioService usuarioService;
 
+    @Mock
+    private PasswordEncoder encoder;
+
     private Usuario usuario;
     private UUID id;
 
@@ -36,7 +40,7 @@ class UsuarioServiceTest {
         usuario.setId(id);
         usuario.setNome("Teste Usuario");
         usuario.setCpf("123.456.789-00");
-        usuario.setSenha("senhaSegura");
+        usuario.setSenha("12345678");
     }
 
     @Test
@@ -71,6 +75,9 @@ class UsuarioServiceTest {
 
     @Test
     void cadastrar_DeveSalvarEUsuarioRetornado() throws Exception {
+
+        usuario.setSenha(encoder.encode("12345678"));
+
         when(usuarioRepository.save(usuario)).thenReturn(usuario);
 
         Usuario result = usuarioService.cadastrar(usuario);
