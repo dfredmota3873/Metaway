@@ -27,7 +27,7 @@ public class UsuarioController implements IUsuarioController {
 
 
     @Override
-    public ResponseEntity<UsuarioResponse> cadastrar(UsuarioRequest usuarioRequest) {
+    public ResponseEntity<UsuarioResponse> cadastrar(UsuarioRequest usuarioRequest) throws Exception {
         log.info("Iniciando cadastro de um usuário com payload: {}", usuarioRequest);
         var usuario = usuarioService.cadastrar(converter.toModel(usuarioRequest));
         log.info("Cadastro de usuário realizado com sucesso id: {}", usuario.getId());

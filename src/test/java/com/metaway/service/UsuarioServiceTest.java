@@ -70,7 +70,7 @@ class UsuarioServiceTest {
     }
 
     @Test
-    void cadastrar_DeveSalvarEUsuarioRetornado() {
+    void cadastrar_DeveSalvarEUsuarioRetornado() throws Exception {
         when(usuarioRepository.save(usuario)).thenReturn(usuario);
 
         Usuario result = usuarioService.cadastrar(usuario);

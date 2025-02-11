@@ -27,7 +27,7 @@ public interface IUsuarioController {
             )
     })
     @PostMapping(value = "",produces=MediaType.APPLICATION_JSON_VALUE,consumes=MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<UsuarioResponse> cadastrar(@Valid @RequestBody UsuarioRequest usuarioRequest);
+    ResponseEntity<UsuarioResponse> cadastrar(@Valid @RequestBody UsuarioRequest usuarioRequest) throws Exception;
 
     @Operation(summary = "Buscar um usuário por id.")
     @ApiResponses(value = {

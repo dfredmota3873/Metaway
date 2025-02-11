@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -15,6 +16,7 @@ import java.time.LocalDate;
 @Builder
 public class AtendimentoResponse {
 
+    private UUID id;
 
     private PetResponse pet;
 

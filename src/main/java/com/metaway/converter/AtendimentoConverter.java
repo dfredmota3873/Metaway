@@ -30,6 +30,7 @@ public class AtendimentoConverter {
     public AtendimentoResponse toResponse(Atendimento atendimento) {
 
         return AtendimentoResponse.builder()
+                .id(atendimento.getId())
                 .pet(petConverter.toResponse(atendimento.getPet()))
                 .data(atendimento.getData())
                 .valor(atendimento.getValor())
