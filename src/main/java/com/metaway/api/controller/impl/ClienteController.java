@@ -52,9 +52,9 @@ public class ClienteController implements IClienteController {
     @Override
     public ResponseEntity<ClienteResponse> atualizar(UUID id, ClienteRequest clienteRequest) {
         log.info("Atualizando dados de cliente com id: {}", id);
-        var usuario = clienteService.atualizar(id,clienteConverter.toModel(clienteRequest));
+        var cliente = clienteService.atualizar(id,clienteConverter.toModel(clienteRequest));
         log.info("Dados atualizados com sucesso id: {}", id);
-        return ResponseEntity.ok(clienteConverter.toResponse(usuario));
+        return ResponseEntity.ok(clienteConverter.toResponse(cliente));
     }
 
     @Override

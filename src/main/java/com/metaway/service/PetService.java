@@ -49,11 +49,10 @@ public class PetService {
 
         Pet petDB = buscarPorId(id);
 
-
         petDB.setCliente(pet.getCliente());
         petDB.setRaca(pet.getRaca());
-        petDB.setNome(petDB.getNome());
-        petDB.setDataNascimento(petDB.getDataNascimento());
+        petDB.setNome(pet.getNome());
+        petDB.setDataNascimento(pet.getDataNascimento());
 
         return petRepository.save(petDB);
 

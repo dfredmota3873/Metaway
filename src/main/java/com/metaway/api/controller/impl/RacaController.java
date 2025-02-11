@@ -53,9 +53,9 @@ public class RacaController implements IRacaController {
     @Override
     public ResponseEntity<RacaResponse> atualizar(UUID id, RacaRequest racaRequest) {
         log.info("Atualizando dados de raça com id: {}", id);
-        var contato = racaService.atualizar(id, racaConverter.toModel(racaRequest));
+        var raca = racaService.atualizar(id, racaConverter.toModel(racaRequest));
         log.info("Dados atualizados com sucesso id: {}", id);
-        return ResponseEntity.ok(racaConverter.toResponse(contato));
+        return ResponseEntity.ok(racaConverter.toResponse(raca));
     }
 
     @Override

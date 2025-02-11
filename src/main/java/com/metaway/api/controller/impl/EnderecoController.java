@@ -30,9 +30,9 @@ public class EnderecoController  implements IEnderecoController {
     @Override
     public ResponseEntity<EnderecoResponse> cadastrar(EnderecoRequest enderecoRequest) {
         log.info("Iniciando cadastro de um endereço com payload: {}", enderecoRequest);
-        var cliente = enderecoService.cadastrar(enderecoConverter.toModel(enderecoRequest));
-        log.info("Cadastro de endereço realizado com sucesso id: {}", cliente.getId());
-        return ResponseEntity.ok(enderecoConverter.toResponse(cliente));
+        var endereco = enderecoService.cadastrar(enderecoConverter.toModel(enderecoRequest));
+        log.info("Cadastro de endereço realizado com sucesso id: {}", endereco.getId());
+        return ResponseEntity.ok(enderecoConverter.toResponse(endereco));
     }
 
     @Override
