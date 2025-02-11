@@ -1,0 +1,1009 @@
+{
+	"info": {
+		"_postman_id": "70b6d247-482e-4869-94dd-9027b3322622",
+		"name": "Metaway - PetShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40598830"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Fred\",\r\n    \"cpf\" : \"01282929380\",\r\n    \"senha\" : \"123456\",\r\n    \"perfil\" : \"CLIENTE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Fred2\",\r\n    \"cpf\" : \"01282929380\",\r\n    \"senha\" : \"123456\",\r\n    \"perfil\" : \"CLIENTE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/usuario/be73d64e-b451-4fec-b7ad-db1ee13d2a0a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"be73d64e-b451-4fec-b7ad-db1ee13d2a0a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca Por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Fred\",\r\n    \"cpf\" : \"01282929380\",\r\n    \"senha\" : \"123456\",\r\n    \"perfil\" : \"CLIENTE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/usuario/be73d64e-b451-4fec-b7ad-db1ee13d2a0a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"be73d64e-b451-4fec-b7ad-db1ee13d2a0a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Fred\",\r\n    \"cpf\" : \"01282929380\",\r\n    \"senha\" : \"123456\",\r\n    \"perfil\" : \"CLIENTE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/usuario/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/usuario/be73d64e-b451-4fec-b7ad-db1ee13d2a0a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"be73d64e-b451-4fec-b7ad-db1ee13d2a0a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"012.829.293-80\",\r\n    \"nome\": \"Frederico\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"012.829.293-99\",\r\n    \"nome\": \"Frederico2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/cliente/a951d0c6-4acc-4cfc-939b-e338712253b3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"cliente",
+								"a951d0c6-4acc-4cfc-939b-e338712253b3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/cliente/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"cliente",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca Por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Fred\",\r\n    \"cpf\" : \"01282929380\",\r\n    \"senha\" : \"123456\",\r\n    \"perfil\" : \"CLIENTE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/cliente/a951d0c6-4acc-4cfc-939b-e338712253b3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"cliente",
+								"a951d0c6-4acc-4cfc-939b-e338712253b3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/cliente/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"cliente",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endereços",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\" : \"25452e3e-3215-4636-a187-be020b7e44a3\",\r\n    \"logradouro\" : \"Rua Sousa Mota 110\",\r\n    \"cidade\" : \"Fortaleza\",\r\n    \"bairro\" : \"Santa barbara\",\r\n    \"complemento\" : \"Casa Verde\",\r\n    \"tag\" : \"Tag1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/endereco",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\" : \"25452e3e-3215-4636-a187-be020b7e44a3\",\r\n    \"logradouro\" : \"Rua Sousa Mota 999\",\r\n    \"cidade\" : \"Maracanau\",\r\n    \"bairro\" : \"Santa barbara\",\r\n    \"complemento\" : \"Casa Verde2\",\r\n    \"tag\" : \"Tag1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/endereco/6f56b27d-64df-4a15-b196-c63088cc5a96",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"endereco",
+								"6f56b27d-64df-4a15-b196-c63088cc5a96"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/endereco/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"endereco",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/endereco/81bcc1d7-4a99-4066-ba44-a4c42fad54b6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"endereco",
+								"81bcc1d7-4a99-4066-ba44-a4c42fad54b6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/endereco/81bcc1d7-4a99-4066-ba44-a4c42fad54b6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"endereco",
+								"81bcc1d7-4a99-4066-ba44-a4c42fad54b6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contatos",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\" : \"25452e3e-3215-4636-a187-be020b7e44a3\",\r\n    \"tipoContato\" : \"TELEFONE\",\r\n    \"valor\": \"85991753065\",\r\n    \"tag\": \"tag1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/contato",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"contato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\" : \"25452e3e-3215-4636-a187-be020b7e44a3\",\r\n    \"tipoContato\" : \"EMAIL\",\r\n    \"valor\": \"dfredmota3873@gmail.com\",\r\n    \"tag\": \"tag1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/contato/302d28f6-8d96-4ee9-8545-ca4a9d2b75c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"contato",
+								"302d28f6-8d96-4ee9-8545-ca4a9d2b75c8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/contato/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"contato",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/contato/302d28f6-8d96-4ee9-8545-ca4a9d2b75c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"contato",
+								"302d28f6-8d96-4ee9-8545-ca4a9d2b75c8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/contato/302d28f6-8d96-4ee9-8545-ca4a9d2b75c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"contato",
+								"302d28f6-8d96-4ee9-8545-ca4a9d2b75c8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Raça",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\" : \"Poodle\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/raca",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"raca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\" : \"Poodle2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/raca/d31ad16d-5e71-47be-beea-4ba969ba4be3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"raca",
+								"d31ad16d-5e71-47be-beea-4ba969ba4be3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/raca/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"raca",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/raca/d31ad16d-5e71-47be-beea-4ba969ba4be3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"raca",
+								"d31ad16d-5e71-47be-beea-4ba969ba4be3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/raca/d31ad16d-5e71-47be-beea-4ba969ba4be3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"raca",
+								"d31ad16d-5e71-47be-beea-4ba969ba4be3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pets",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\":\"25452e3e-3215-4636-a187-be020b7e44a3\",\r\n    \"raca\": \"a1048db3-d333-47ed-8ae8-58211cd81e43\",\r\n    \"nome\": \"Floquinho\",\r\n    \"dataNascimento\": \"2025-09-09\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/pet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\":\"25452e3e-3215-4636-a187-be020b7e44a3\",\r\n    \"raca\": \"a1048db3-d333-47ed-8ae8-58211cd81e43\",\r\n    \"nome\": \"Testeee\",\r\n    \"dataNascimento\": \"2025-09-09\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/pet/2c7f47af-3f9c-447a-a47b-cee43af8ad29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"pet",
+								"2c7f47af-3f9c-447a-a47b-cee43af8ad29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/pet/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"pet",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/pet/9a2d68eb-8719-4b8c-841b-dc4cf2a554fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"pet",
+								"9a2d68eb-8719-4b8c-841b-dc4cf2a554fa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/pet/9a2d68eb-8719-4b8c-841b-dc4cf2a554fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"pet",
+								"9a2d68eb-8719-4b8c-841b-dc4cf2a554fa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Atendimento",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pet\":\"314fb9ad-211f-4e61-ab0f-dac920d2415f\",\r\n    \"descricao\":\"Banho e Tosa\",\r\n    \"valor\": 50.5,\r\n    \"data\": \"2025-09-02\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/atendimento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"atendimento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pet\":\"314fb9ad-211f-4e61-ab0f-dac920d2415f\",\r\n    \"descricao\":\"Banho2\",\r\n    \"valor\": 150.5,\r\n    \"data\": \"2025-09-02\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/atendimento/446a2422-dd42-4836-845e-a3c34ce1be37",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"atendimento",
+								"446a2422-dd42-4836-845e-a3c34ce1be37"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/atendimento/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"atendimento",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/atendimento/c25e1b60-0f85-4fa9-81e6-2f70a5f6aa19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"atendimento",
+								"c25e1b60-0f85-4fa9-81e6-2f70a5f6aa19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/v1/atendimento/c25e1b60-0f85-4fa9-81e6-2f70a5f6aa19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"atendimento",
+								"c25e1b60-0f85-4fa9-81e6-2f70a5f6aa19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\":\"01282929380\",\r\n    \"senha\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/v1/auth/logar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"logar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
